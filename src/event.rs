@@ -103,13 +103,13 @@ where
                 Button::Keyboard(key) => KeyPressed(key.into()),
                 Button::Mouse(button) => MouseButtonPressed(button.into()),
                 Button::Controller(button) => ControllerButtonPressed(button.into()),
-                Button::Hat(_) => unimplemented!(), //TODO: No idea what to do with this
+                Button::Hat(_) => unimplemented!(), //TODO: Figure out which events we need
             },
             ButtonState::Release => match button {
                 Button::Keyboard(key) => KeyReleased(key.into()),
                 Button::Mouse(button) => MouseButtonReleased(button.into()),
                 Button::Controller(button) => ControllerButtonReleased(button.into()),
-                Button::Hat(_) => unimplemented!(), //TODO: No idea what to do with this
+                Button::Hat(_) => unimplemented!(), //TODO: Figure out which events we need
             },
         },
         Input::Move(motion) => match motion {
